@@ -200,6 +200,10 @@ switch (role) {
 
 //eg1
 
+// for(initialization; condition; update){
+//     //code execute
+// }
+
 for(let i = 0; i < 10; i++) {
     console.log("iteration", i)
 }
@@ -210,9 +214,75 @@ let table = 5;
 for (let i = 1; i <= 10; i++ ) {
     console.log(`${table} * ${i} = ${table * i}`)
 }
-
+//eg3
 let i, x= '';
-for (i = 0; i <=5; i++) {
+for (i = 0; i <=5; i++){
     x += i;
+    console.log(x);
 }
-console.log(x)
+
+//example4
+
+
+for(let k = 0; k <= 10; k += 2 ){
+    console.log("odd number", k)
+}
+
+// for(let w = 1; w <= 5; w++ ){
+//     if (w === 3) {
+//         continue
+//     }
+//     console.log(w)
+//  } 
+
+// let fruit = ["apple", "mango", "kiwi", "tomato"]
+// for(let i = 1; i< fruit.length; i++ ){
+//     console.log(fruit[i])
+//  } 
+
+
+let myname = "lateefat" 
+for( let f = 0 ; f< myname.length; f++){
+    console.log(myname[f])
+}
+
+//FOR ...IN LOOP
+
+let user = {name:"bisi", age:19, city: "osun"}; 
+
+for(key in user){
+    console.log( key + ":", user[key])
+}
+
+let colors = ["yellow", "green", "blue", "pink"];
+for(let color of colors){
+    console.log( color)
+}
+
+//WHILE LOOP
+
+// while("condition") {
+//     //code to execute
+// }
+
+// let P = 1;
+// while(P <= 7){
+//     console.log(P)
+//     P++
+// }
+
+let happy = ["apple", "mango", "kiwi", "tomato"]
+let J = 0;
+while(J < happy.length) {
+    console.log(happy[J]);
+    J++
+}
+
+//forEach
+const students = ["abeeb", "muheez", "hakeem", "abu"]
+students.forEach( (student, i) => {
+    console,log(`index ${i} : ${student}`)
+}
+
+)
+ 
