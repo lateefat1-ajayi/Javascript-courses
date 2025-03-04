@@ -92,7 +92,9 @@ console.log(ajayi)
 //    }
 // })
 
-document.querySelector("button").addEventListener("click", function(){ document.getElementById("message").textContent = "button clicked!"})
+document.querySelector("button").addEventListener("click", function(){
+     document.getElementById("message").textContent = "button clicked!"
+    })
 
 //MOUSE EVENT
 

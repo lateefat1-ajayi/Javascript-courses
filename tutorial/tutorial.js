@@ -72,3 +72,37 @@ console.log(day)
 for(i = 1; i<= 10; i++){
     console.log(i * 2)
 }
+
+
+
+//idname
+
+const latee = document.getElementById("one")
+console.log(one)
+
+one.textContent = "lateefat"
+
+
+// classname
+
+const heqmah = document.getElementsByClassName("two")
+console.log(heqmah)
+
+//tag name
+
+const fati = document.getElementsByTagName("h2")
+console.log(fati)
+
+const hear = document.querySelector("p")
+console.log(hear)
+
+hear.classList.remove("two")
+
+const container = document.querySelector("div")
+
+
+container.innerHTML = `
+    <h2>AJAYI LATEEFAT </h2>
+    <p> I AM GOING TO BE 18 IN JUNE</p>
+`
+container.style.cssText = "color: white;background-color: deeppink; padding: 20px; text-align: center;"
