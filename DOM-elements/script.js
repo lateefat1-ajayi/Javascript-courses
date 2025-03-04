@@ -116,3 +116,11 @@ document.getElementById("greetBtn").addEventListener("click", () => greet("Latee
 const newBox = document.createElement("div")
 newBox.textContent = " yay its a monday"
  document.body.appendChild(newBox)
+
+ const box = document.getElementById("box")
+
+ const newh1 = document.createElement("h1")
+ newh1.textContent = "bro"
+ newh1.style.color = "white"
+
+ box.appendChild(newh1)
