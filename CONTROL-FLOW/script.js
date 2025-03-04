@@ -103,7 +103,8 @@ let day = "tuesday"
 
 switch(day){
     case "monday":
-    console.log("today is bright");break; 
+    console.log("today is bright");
+    break; 
     case "friday":
     console.log("Jumat");
     break;
@@ -268,7 +269,7 @@ for(let color of colors){
 // let P = 1;
 // while(P <= 7){
 //     console.log(P)
-//     P++
+//     P--
 // }
 
 let happy = ["apple", "mango", "kiwi", "tomato"]
