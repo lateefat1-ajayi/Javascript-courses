@@ -189,3 +189,94 @@ console.log(prices)
 const commodities = investory.map((value) => value.name
 )
 console.log(commodities)
+
+//MAP METHOD
+// it creates a new array amd apply function to each element without modifying the original array
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+const multipliedVal = arr.map( (El) => El * 2);
+console.log(multipliedVal);
+
+const words = ["hello", "world", "javascript"]
+
+console.log(words.map ( (oh)=>oh.toUpperCase()))
+
+const pricesInUsd = [200, 120, 360, 90]
+const xchangeRate = 1490
+
+console.log(pricesInUsd.map((usd) =>
+usd * xchangeRate))
+
+const users = [
+    {name: "lateefah", age: 300},
+    {name: "abdullah", age: 950},
+    {name: "muiz", age: 1450},
+    {name: "kabeer", age: 1950}
+];
+
+const nameOnly = users.map((value) => value.name)
+console.log(nameOnly)
+
+
+
+const products = [
+    {name: "Laptop", price: 300},
+    {name: "desktop", price: 950},
+    {name: "mouse", price: 1450},
+    {name: "keyboard", price: 1950}
+];
+
+const productWithId = products.map((product, index) => (
+    {
+      id: index + 1,
+      ...product
+    }
+))
+console.log(productWithId)
+console.log(products)
+
+const productId = productWithId.map((idNumbers) => idNumbers.id)
+console.log(productId)
+
+//create an array of numbers use map method to return the numbers less than six
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const ans = nums.map((i) => 
+{
+    if (i < 6) {
+        return i
+    }
+})
+
+console.log(ans)
+
+//FILTER 
+// it creates an array and return the elements that meet the condition
+// filter method has the same limitation as map method, i.e it does not modify the array elements
+
+const evenNumber = nums.filter((i) => i % 2 === 0)
+console.log(evenNumber)
+
+const below = productWithId.filter((product) => product.price <= 1000)
+console.log(below)
+
+const lesstn7 = productWithId.filter((name) => name.name.length < 7)
+console.log(lesstn7)
+
+const newArr = [ 100, "pelumi", false, {}, null, undefined]
+
+const filteredString = newArr.filter((data) => typeof data === "string")
+console.log(filteredString)
+
+//exercise
+
+let equals = 0;
+const priceOnly = productWithId.map((index) => index.price)
+console.log(priceOnly)
+
+priceOnly.forEach((hope) =>{
+    console.log(equals,(equals+= hope), hope)
+})
+console.log(equals)
