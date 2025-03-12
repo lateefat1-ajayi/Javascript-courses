@@ -117,3 +117,95 @@ const student = {
    }
 }
 console.log(student.favsum())
+
+const player = {
+    firstName: "Silva",
+    lastName: "Tiago",
+    age : 38,
+    team: {
+        clubName: "chealsea", location: "england", manager: "Eric"
+    },
+
+    jerseyNumber: 6
+}
+
+console.log(player)
+console.log(player["team"]["manager"])
+console.log(player.team.clubName)
+//TO UPDATE LOCATION
+player.team.location = "South Africa"
+console.log(player.team.location )
+
+//BUILT IN METHOD
+
+const myObject = {
+    myMethod1 : () => {},//arrow function
+    mymethod2 : function() {}, //function declaration
+    mymethod3(){} //function expression
+}
+
+const dog = {
+    name : "bingo",
+    age : 10,
+    bark: () => {
+        console.log("woof")
+    }
+}
+console.log(dog.name)
+dog.bark();
+
+//OBJECT METHODS
+//OBJECT.KEYS()
+//OBJECT.VALUES()
+//OBJECT.ENTRIES() it creates a nested array of the key and value pairs of an object
+//OBJECT.FREEZE() // prevent modification of existing properties and prevents properties from being added or removed
+//OBJECT.SEAL() it prevents new properties from being added or removed from an object
+
+//object.KEYS()
+
+const employees = {
+    lead: "mrSoliu",
+    secretary:"ridwon",
+    sales: "dolapo",
+    accountant: "lateefat"
+}
+const employeeInfo = Object.keys(employees)
+console.log(employeeInfo)
+
+const employeeInf = Object.values(employees)
+console.log(employeeInf)
+
+const session = {
+    id: 1,
+    date: "10-march-2025",
+    device: "mobile",
+    browser : "chrome"
+}
+
+const sessionValue = Object.entries(session)
+console.log(sessionValue)
+
+const operatingSystem = {
+    name: "linus",
+    version: 1.0,
+    license : "open source"
+}
+
+const opsystem = Object.entries(operatingSystem)
+console.log(opsystem)
+
+const user = {
+    username : "olu",
+    password : 1234
+}
+const userInfo = Object.freeze(user)
+console.log(userInfo)
+
+const user1 = {
+    name: "bolu",
+    age: 20
+}
+const userSeal = Object.seal(user1)
+userSeal.name = "titi"
+console.log(userSeal)
+
