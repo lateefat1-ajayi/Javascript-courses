@@ -96,7 +96,7 @@ const register = (firstname, password, country, dateofbirth) => {
 
     if(password.length < 6) return "minimum of 6 characters";
 
-    return firstname === "lateefat" && password === "pass123" ? "user already exists" : `${firstname} successfully register`;
+    return firstname === "lateefat" && password === "pass123" ? "user already exists" : `${firstname} successfully registered`;
 }
 console.log(register("lateefat", "pass123", "nigeria", "19-06-2025") )
 
