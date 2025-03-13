@@ -160,3 +160,80 @@ console.log(exampleString.repeat("2"))
 // console.log(newArrayy)
 
 
+const user = {
+    1: {id: 1, name: "lateefah"},
+    2: {id: 2, name: "bolu"}
+}
+
+const fetchingUserData = (userId) =>{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(user[userId]){
+                resolve(user[userId])
+            }else{
+                reject("could not fetch user data")
+            }
+        }, 3000);
+    });
+}
+
+const userTask = 
+{ 1: ["reading"],
+ 2: ["laughing"]
+}
+
+const fetchingUserTask = (userId) =>{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(user[userId] && userTask[userId]){
+                resolve(userTask[userId])
+            }else{
+                reject("could not fetch user task")
+            }
+        }, 4000);
+    });
+}
+
+
+
+const userTaskAndInfo = async(userId) =>{
+
+    try {
+        console.log("fetching info....")
+        const data = await fetchingUserData(userId);
+
+        console.log(data)
+        console.log(`fetching ${data?.name}'s task`)
+
+        const task = await fetchingUserTask(userId);
+        console.log(task)
+        console.log(`${data?.name} has this task ${task}`)
+
+        
+    } catch (error) {
+        console.log(`error : ${error}`)
+    }finally{
+        console.log("operation completed!")
+    }
+
+}
+userTaskAndInfo(3)
+
+function fetchesData (name, callback){
+    console.log("hello " + name);
+    callback();
+}
+
+function callcar(){
+    console.log("lfg...")
+}
+fetchesData("lateefat" , callcar)
+
+
+function dok (youu) {
+    youu("what is it")
+}
+
+dok((data) => {
+    console.log(data)
+})

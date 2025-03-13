@@ -13,7 +13,8 @@ function callCar() {
 }
 car("bmw", callCar)
 
-//example2, set timeout we want the execution to be done after a period of time, it uses millliseconds, 2s is 2000
+//example2, set timeout we want the execution to be done after a period
+//of time, it uses millliseconds, 2s is 2000
 
 function greet(name){
     setTimeout(() =>{

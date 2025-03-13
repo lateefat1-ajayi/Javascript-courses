@@ -1,0 +1,9 @@
+.article{
+    background-color: aqua;
+    color: white;
+    column-gap: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
