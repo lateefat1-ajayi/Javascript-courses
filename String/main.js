@@ -1,239 +1,133 @@
-const mixedString = "Hi, What is your name?";
-const lowerCase = mixedString.toLowerCase()
-const upperCase = mixedString.toUpperCase()
-console.log(lowerCase)
-console.log(upperCase)
+console.log("welcome to string in details")
+//length method
 
+let item = "DLT Africa!";
 
+const length = item.length;
+console.log(length);
 
-//index of, lastindex of, includes, startswith, endswith, splice, split, trim,reverse and join, repeat,
-const exampleString = "I love cats, cats are small ";
+const index = item.charAt(0);
+console.log(index);
 
-// const result = exampleString.indexOf(result)
-console.log(exampleString.indexOf("cat"))
+const firstOccurence = item.indexOf("Africa");
+console.log(firstOccurence);
 
-console.log(exampleString.lastIndexOf("cat"))
+//extract part of a string between two index
 
-console.log(exampleString.includes("you"))
+const extractE1 = item.substring(1, 5);
+console.log(extractE1);
 
-console.log(exampleString.startsWith("I"))
+const extractE2 = item.slice(0, 7);
+console.log(extractE2);
 
-console.log(exampleString.endsWith("small"))
+//to track space
+const split = item.split(" ");
+console.log(split);
 
-console.log(exampleString.slice("0" , "5"))
+const join = split.join(" ")
+console.log(join);
 
-console.log(exampleString.split("are"))
+const upper = item.toUpperCase();
+console.log(upper);
 
-console.log(exampleString.trim())
+const lower = upper.toLowerCase();
+console.log(lower);
 
-console.log(exampleString.repeat("2"))
-// // const exampleString2 = "I love cats, cats are small";
+const checkAvailability = item.includes("Africa");
+console.log(checkAvailability);
 
-// // console.log(exampleString2.join(""))
+const starting = item.startsWith("DLT");
+console.log(starting);
 
+const ending = item.endsWith("europe");
+console.log(ending);
 
-// //SELF TRIALS
+const email = "   yourname@gmail.com  ";
+console.log(email);
 
-// const fruits = ["apple", "orange", "pineapple", "pear"]
+const trimmedEmail = email.trim();
+console.log(trimmedEmail);
 
-// fruits.forEach((jane) => {
-//     console.log(jane.toUpperCase())
-// })
+const repeat = item.repeat(2);
+console.log(repeat);
 
-// let answer = 0;
-// let addSum = [1, 2, 3, 4]
+const replace = item.replace("!", " ");
+console.log(replace);
 
-// addSum.forEach((me) => {
-//     console.log(answer, (answer += me), me)
-// })
-// console.log(answer);
+const lastIndex = item.lastIndexOf("c");
+console.log(lastIndex);
 
-// let answer2 = 0;
-// let addSum2 = [1, 2, 3, 4]
+const concat = item.concat(trimmedEmail);
+console.log(concat);
 
-// const newAns = addSum2.reduce((acc, curr) => (acc + curr), 0)
+const example = 1 + "1";
+console.log(example)
 
-// console.log(newAns)
+//END OF STRING METHOD!
 
-// const gadgets = [{name: "iphone", price: 2000}, {name: "macbook", price: 2300}]
-// console.log(gadgets)
-// const gadgetsMap = gadgets.map((value)=> value.name)
+//Value and refrence in js
+//Primitive are [passed by value]
 
-// console.log(gadgetsMap)
-// const cap = gadgetsMap.map((oh) => oh.toUpperCase())
+let a = 6;
+let b = a;
 
-// console.log(cap)
+console.log(b)
+console.log(a)
+b = 10;
+console.log(b);
 
-// const gadgetsMap2 = gadgets.map((value)=> value.price)
-// console.log(gadgetsMap2)
+let firstName = "Oluwaferanmi";
+let fullName = firstName;
 
-// const lssthn7 = gadgets.filter((val) => val.name.length < 7)
-// console.log(lssthn7)
-// const lssthn2 = gadgets.filter((val) => val.price <= 2000)
-// console.log(lssthn2)
+console.log(fullName);
 
+fullName = "Oluwaferanmi Alaba"
+console.log(fullName)
 
+//Non-primitive are [passed by reference].
+let firstExample = {age: 12}
+let exampleTwo = firstExample;
+exampleTwo.age = 20;
 
-// const nestedArr = [[1,2], [3,4], [5,6]]
+console.log(firstExample)
+console.log(exampleTwo)
 
-// const newNestedArr = nestedArr.reduce((acc, curr) => (acc.concat(curr)), [])
+//SPREAD OPERATORS allows you to unpack iterables like array string and maps etc and objects into individual elements or key value pairs. they allow you to copy an array 
 
-// console.log(newNestedArr)
+const arr = [1, 2, 10, 405];
+const arrClone = [...arr];
+console.log(arrClone)
+arrClone.push(4)
+console.log(arr)
 
-// const lessthn4 = newNestedArr.map((x) =>{
-//     if(x < 4){
-//         return x
-//     }
-// })
-// console.log(lessthn4)
+//spread operator can be used to merge two arrays together
 
+let arr1 = [1, 2];
+let arr2 = [3, 4];
 
-// const numb = [1,2,3,4,5,6,7,8,9,10]
+const merged = [...arr1, ...arr2];
+console.log(merged);
 
-// for(i = 1; i<numb.length; i+= 2 ){
-//     console.log(numb[i])
-// }
+let object1 = {name: "olu", hobby: "reading"}
+let object2 = {age: 12}
+const mergedObj = {...object1, ...object2}
+console.log(mergedObj)
 
-// for(i =0; i< numb.length; i++){
-//     console.log(numb[i])
-// }
-
-// for(i= 0; i< numb.length; i++){
-//     if (i=== 3){
-//         break;
-//     }
-//     console.log(numb[i])
-// }
-
-
-
-// let table = 3;
-
-// for(i= 1; i<= 10; i++){
-//     console.log(` ${i} * ${table} = ${i * table}`)
-// }
-
-
-// const player = {
-//     firstName: "Silva",
-//     lastName: "Tiago",
-//     age : 38,
-//     team: {
-//         clubName: "chealsea", location: "england", manager: "Eric"
-//     },
-
-//     jerseyNumber: 6}
-
-// const pll = player.team.clubName;
-
-// console.log(pll)
-
-// player.team.location = "south africa"
-
-// const pll2 = player.team.location;
-
-// console.log(pll2)
-
-
-// const button = document.getElementById('button')
-// function greet(name){
-//     alert("hi," + name + "!")
-// }
-
-
-
-// document.getElementById('button').addEventListener("click",() => greet("lateefat"))
-
-// const login = function (username, password){
-//     if(!username || ! password)
-//         return "please fill out required fields"
-//    if(password.length < 5) return "password can not be less than five"
-
-//    return username === "lateefat" && password === "0123latee"? "user exists" : "invalid details"
-// }
-
-// console.log(login("lateefat", "0123latee"))
-
-
-// const arrayy = ["me " , "you "]
-// const newArrayy = arrayy.join("they ")
-// console.log(newArrayy)
-
-
-const user = {
-    1: {id: 1, name: "lateefah"},
-    2: {id: 2, name: "bolu"}
+function sum (a,b,c){
+    return a+b+c;
 }
+const values = [12, 12, 12];
+const result = sum(...values);
 
-const fetchingUserData = (userId) =>{
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if(user[userId]){
-                resolve(user[userId])
-            }else{
-                reject("could not fetch user data")
-            }
-        }, 3000);
-    });
-}
+console.log(result);
 
-const userTask = 
-{ 1: ["reading"],
- 2: ["laughing"]
-}
+//DESTRUCTURING
 
-const fetchingUserTask = (userId) =>{
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if(user[userId] && userTask[userId]){
-                resolve(userTask[userId])
-            }else{
-                reject("could not fetch user task")
-            }
-        }, 4000);
-    });
-}
+let person = {name: "Alhaji agba", age: 102, status:"Dead"};
+const {name, age} = person;
+console.log(name)
 
+let fruit = ["Apple", "Banana", "cherry", "Date", "Egg plant"];
+const [first, second , third] = fruit;
 
-
-const userTaskAndInfo = async(userId) =>{
-
-    try {
-        console.log("fetching info....")
-        const data = await fetchingUserData(userId);
-
-        console.log(data)
-        console.log(`fetching ${data?.name}'s task`)
-
-        const task = await fetchingUserTask(userId);
-        console.log(task)
-        console.log(`${data?.name} has this task ${task}`)
-
-        
-    } catch (error) {
-        console.log(`error : ${error}`)
-    }finally{
-        console.log("operation completed!")
-    }
-
-}
-userTaskAndInfo(3)
-
-function fetchesData (name, callback){
-    console.log("hello " + name);
-    callback();
-}
-
-function callcar(){
-    console.log("lfg...")
-}
-fetchesData("lateefat" , callcar)
-
-
-function dok (youu) {
-    youu("what is it")
-}
-
-dok((data) => {
-    console.log(data)
-})
+console.log(second);
