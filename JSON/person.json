@@ -1,0 +1,10 @@
+ {
+    "name" : "Lateefat Ajayi Olubisi Alake ",
+    "age" : 29,
+    "hobbies" : ["sleeping", "talking", "reading"],
+    "address" : {"street": "joy street",
+                "no": "40",
+                "city" : "Ogun state"
+    }
+}
+
